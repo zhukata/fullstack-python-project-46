@@ -1,6 +1,6 @@
 import { Command } from 'commander'
 
-import genDiff from './generatediff.js'
+import genDiff from './generate-diff.js'
 
 const program = new Command()
 

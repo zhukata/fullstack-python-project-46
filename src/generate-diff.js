@@ -1,14 +1,19 @@
 import _ from 'lodash'
 import parse from './parse.js'
-import stylish from './formaters/stylish.js'
+import stylish from './formatters/stylish.js'
+import plain from './formatters/plain.js'
+import json from './formatters/json.js'
 
 const genDiff = (filepath1, filepath2, formatName = 'stylish') => {
   const diff = getDifferent(parse(filepath1), parse(filepath2))
   switch (formatName) {
     case 'stylish':
       return stylish(diff)
+    case 'plain':
+      return plain(diff)
+    case 'json':
+      return json(diff)
   }
-  return diff
 }
 
 const getDifferent = (data1, data2) => {

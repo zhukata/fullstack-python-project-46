@@ -16,7 +16,10 @@ export default [
   },
   {
     languageOptions: {
-      globals: globals.node,
+      globals: {
+        ...globals.node, // Оставляем глобальные переменные Node.js
+        ...globals.jest, // Добавляем Jest!
+      },
       parserOptions: {
         projectService: true,
         tsconfigRootDir: import.meta.dirname,

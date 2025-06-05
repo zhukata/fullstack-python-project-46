@@ -1,9 +1,8 @@
-import { Command } from 'commander';
+import { Command } from 'commander'
 
-import { argv } from 'process';
-import genDiff from './generatediff.js';
+import genDiff from './generatediff.js'
 
-const program = new Command;
+const program = new Command()
 
 program
   .name('gendiff')
@@ -18,4 +17,4 @@ program
 
   .action((filepath1, filepath2) => console.log(genDiff(filepath1, filepath2)))
 
-program.parse(process.argv);
+program.parse(process.argv)

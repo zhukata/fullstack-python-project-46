@@ -1,8 +1,6 @@
-#!/usr/bin/env node
-
 import { Command } from 'commander'
 
-import genDiff from '../src/generate-diff.js'
+import genDiff from './generate-diff.js'
 
 const program = new Command()
 
@@ -20,3 +18,5 @@ program
   .action((filepath1, filepath2) => console.log(genDiff(filepath1, filepath2, program.opts().format)))
 
 program.parse(process.argv)
+
+export default program

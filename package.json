@@ -4,6 +4,9 @@
   "description": "[![Actions Status](https://github.com/zhukata/fullstack-python-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/zhukata/fullstack-python-project-46/actions)",
   "main": "src/gendiff.js",
   "type": "module",
+  "bin": {
+    "gendiff": "bin/gendiff.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

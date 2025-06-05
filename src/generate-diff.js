@@ -4,7 +4,7 @@ import stylish from './formatters/stylish.js'
 import plain from './formatters/plain.js'
 import json from './formatters/json.js'
 
-const genDiff = (filepath1, filepath2, formatName = 'stylish') => {
+const genDiff = (filepath1, filepath2, formatName) => {
   const diff = getDifferent(parse(filepath1), parse(filepath2))
   switch (formatName) {
     case 'stylish':

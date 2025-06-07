@@ -1,4 +1,4 @@
-import genDiff from '../src/generate-diff.js'
+import genDiff from '../src/index.js'
 import path from 'path'
 import fs from 'fs'
 

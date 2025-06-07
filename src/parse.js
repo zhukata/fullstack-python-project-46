@@ -16,7 +16,6 @@ const parse = (filepath) => {
 
 const normilizePath = (filepath) => {
   const dir = process.cwd()
-  console.log(dir)
   if (filepath.startsWith(dir)) {
     return filepath
   }

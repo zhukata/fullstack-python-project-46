@@ -17,7 +17,7 @@ program
   .argument('<filepath2>')
 
   .action((firstConfigPath, secondConfigPath) => {
-    const diff = genDiff(firstConfigPath, secondConfigPath, program.format)
+    const diff = genDiff(firstConfigPath, secondConfigPath, program.opts().format)
     console.log(diff)
   })
 program.parse(process.argv)

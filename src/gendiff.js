@@ -15,8 +15,20 @@ program
   .argument('<filepath1>')
   .argument('<filepath2>')
 
-  .action((filepath1, filepath2) => console.log(genDiff(filepath1, filepath2, program.opts().format)))
-
+  .action((filepath1, filepath2) => {
+    if (!filepath1 || !filepath2) {
+      console.error('Error: You must provide two file paths.')
+      process.exit(1)
+    }
+    try {
+      console.log(genDiff(filepath1, filepath2, program.opts().format))
+      process.exit(0)
+    }
+    catch (error) {
+      console.error(`Error: ${error.message}`)
+      process.exit(1)
+    }
+  })
 program.parse(process.argv)
 
 export default program

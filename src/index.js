@@ -12,7 +12,6 @@ const genDiff = (filepath1, filepath2, formatName = 'stylish') => {
     case 'plain':
       return plain(diff)
     case 'json':
-      console.log(JSON.stringify(diff, null, 2))
       return json(diff)
   }
 }

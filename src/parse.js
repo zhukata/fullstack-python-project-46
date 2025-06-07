@@ -25,6 +25,4 @@ const normilizePath = (filepath) => {
   }
 }
 
-// console.log(parse('file1.json'))
-
 export default parse

@@ -1,6 +1,7 @@
+#!/usr/bin/env node
 import { Command } from 'commander'
 
-import genDiff from './generate-diff.js'
+import genDiff from '../src/generate-diff'
 
 const program = new Command()
 
@@ -30,5 +31,3 @@ program
     }
   })
 program.parse(process.argv)
-
-export default program
